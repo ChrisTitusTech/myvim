@@ -1,6 +1,7 @@
-" -- VIM PLUG Setup and LOAD -test-
+" -- VIM PLUG Setup and LOAD --
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
@@ -11,6 +12,7 @@ call plug#end()
 " Startup Settings
 	set nocompatible
 	set number relativenumber
+	colorscheme onedark 
 	filetype plugin on
 	syntax on
 	set encoding=utf-8
