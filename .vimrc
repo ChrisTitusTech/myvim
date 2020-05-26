@@ -1,4 +1,4 @@
-" -- VIM PLUG Setup and LOAD --
+" -- VIM PLUG Setup and LOAD -test-
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
