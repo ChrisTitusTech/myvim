@@ -26,7 +26,7 @@ call plug#end()
 	endif
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
-" Key Maps
+" Key Maps-test
 	map <C-o> :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
 	vnoremap <C-c> "+y
