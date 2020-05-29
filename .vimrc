@@ -26,14 +26,14 @@ call plug#end()
 	endif
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
-" Key Maps-test
+" Key Maps
 	map <C-o> :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
 	vnoremap <C-c> "+y
 	nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
 " Persistent_undo
 	if has("persistent_undo")
-	    set undodir=$HOME."/.undodir"
+	    set undodir=$HOME"/.undodir"
 	    set undofile
 	endif
 	let g:undotree_WindowLayout = 2
