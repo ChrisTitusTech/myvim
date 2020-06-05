@@ -44,6 +44,7 @@ call plug#end()
 	map <C-\> :Goyo<CR>
 	vnoremap <C-c> "+y
 	nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
+    nnoremap <Leader>i :w !ix<CR>
 " Persistent_undo
 	set undodir=~/.vim/undodir"
 	set undofile
