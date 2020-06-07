@@ -7,7 +7,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
-Plug 'vimwiki/vimwiki'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " Startup Settings
@@ -18,6 +19,7 @@ call plug#end()
 	set shiftwidth=4
 	set expandtab
 	set smartindent
+    set nofoldenable
 	set nowrap
 	set smartcase
 	set noswapfile
@@ -55,3 +57,9 @@ call plug#end()
     nnoremap <Leader>3 3gt<CR>
     nnoremap <Leader>4 4gt<CR>
     nnoremap <Leader>5 5gt<CR>
+" Markdown Edits
+    let g:vim_markdown_autowrite = 1
+    let g:vim_markdown_no_extensions_in_markdown = 1
+    let g:vim_markdown_conceal = 0
+    let g:vim_markdown_override_foldtext = 0
+    let g:vim_markdown_folding_disabled = 1
