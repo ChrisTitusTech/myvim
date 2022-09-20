@@ -1,3 +1,4 @@
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " -- VIM PLUG Setup and LOAD --
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
