@@ -10,6 +10,9 @@ Plug 'mbbill/undotree'
 Plug 'preservim/nerdtree'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'wakatime/vim-wakatime'
+Plug 'ryanoasis/vim-devicons'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " Startup Settings
@@ -43,11 +46,11 @@ call plug#end()
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
 " Key Maps
-	map <C-o> :NERDTreeToggle<CR>
+	map <Leader>n :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
 	vnoremap <C-c> "+y
 	nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
-    nnoremap <Leader>i :w !ix<CR>
+  nnoremap <Leader>i :w !ix<CR>
 " Persistent_undo
 	set undodir=~/.vim/undodir"
 	set undofile
