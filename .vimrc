@@ -104,3 +104,7 @@ function! s:align()
     call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
   endif
 endfunction
+
+" transparent bg
+autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+
