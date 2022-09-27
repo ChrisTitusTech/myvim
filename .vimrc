@@ -12,12 +12,15 @@ Plug 'plasticboy/vim-markdown'
 Plug 'wakatime/vim-wakatime'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug '907th/vim-auto-save'
 call plug#end()
 
 " Startup Settings
 	syntax on
   let mapleader=" "
   let NERDTreeShowHidden=1
+  let g:auto_save = 1
+  let g:auto_save_events = ["InsertLeave", "TextChanged"]
   set mouse=a
   set clipboard=unnamedplus
   set cursorline
