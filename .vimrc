@@ -13,6 +13,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug '907th/vim-auto-save'
+Plug 'jdhao/better-escape.vim'
 call plug#end()
 
 " Startup Settings
