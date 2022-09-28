@@ -70,6 +70,7 @@ call plug#end()
 " General Shortcuts
   nnoremap S :%s//g<Left><Left>
   nmap <Leader>r :w<CR>:so %<CR>
+  map <Leader>e $
 
 " Persistent_undo
 	set undodir=~/.vim/undodir"
