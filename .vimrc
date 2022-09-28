@@ -54,7 +54,7 @@ call plug#end()
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
 
-" Plugin Shortcuts
+" Plugin Shortcuts https://christitus.com
 	map <Leader>f :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
