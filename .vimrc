@@ -1,4 +1,3 @@
-" -- VIM PLUG Setup and LOAD --
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
@@ -61,6 +60,8 @@ call plug#end()
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
   nnoremap <C-f> :Files<CR>
   nnoremap <Leader>l :Tabularize /
+  let g:better_escape_shortcut = 'jj'
+  let g:better_escape_interval = 250
 
 " Copy Paste
 	vnoremap <C-c> "+y
