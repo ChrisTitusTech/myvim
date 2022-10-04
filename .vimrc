@@ -21,6 +21,7 @@ call plug#end()
   let NERDTreeShowHidden=1
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
+  let FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,public/*,website/public/*}"'
   set mouse=a
   set clipboard=unnamedplus
   set cursorline
@@ -63,11 +64,18 @@ call plug#end()
   let g:better_escape_shortcut = 'jj'
   let g:better_escape_interval = 250
 
-" Copy Paste
-	vnoremap <C-c> "+y
-	map <C-v> "+gP
-	cmap <C-V> <C-R>+
+" Paste system clipboard with Ctrl + v
+inoremap <F10> <ESC>"*gPi
+nnoremap <F10> "*gP<ESC>
+vnoremap <F10> d"*gP<ESC>
+cnoremap <F10> <C-r>*
 
+" Copy to system clipboard with Ctr + c
+vnoremap <F9> "*y
+nnoremap <F9> "*yy
+inoremap <F9> <ESC>"*yyi
+
+map <F8> @0=@+
 " General Shortcuts
   nnoremap S :%s//g<Left><Left>
   nmap <Leader>r :w<CR>:so %<CR>
