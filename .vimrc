@@ -75,7 +75,6 @@ vnoremap <F9> "*y
 nnoremap <F9> "*yy
 inoremap <F9> <ESC>"*yyi
 
-map <F8> @0=@+
 " General Shortcuts
   nnoremap S :%s//g<Left><Left>
   nmap <Leader>r :w<CR>:so %<CR>
