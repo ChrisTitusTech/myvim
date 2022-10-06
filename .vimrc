@@ -21,7 +21,7 @@ call plug#end()
   let NERDTreeShowHidden=1
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
-  let FZF_DEFAULT_COMMAND='rg --files --follow --no-ignore-vcs --hidden -g "!{node_modules/*,.git/*,public/*,website/public/*}"'
+  let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
   set mouse=a
   set clipboard=unnamedplus
   set cursorline
@@ -59,7 +59,7 @@ call plug#end()
 	map <Leader>f :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
-  nnoremap <C-f> :Files<CR>
+  nnoremap <C-f> :Files!<CR>
   nnoremap <Leader>l :Tabularize /
   let g:better_escape_shortcut = 'jj'
   let g:better_escape_interval = 250
@@ -100,6 +100,7 @@ call plug#end()
   let g:vim_markdown_conceal = 0
   let g:vim_markdown_override_foldtext = 0
   let g:vim_markdown_folding_disabled = 1
+  let g:vim_markdown_new_list_item_indent = 2
 
 " Markdown auto format tables
 inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
