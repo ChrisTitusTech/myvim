@@ -1,29 +1,30 @@
+" Plugin Loading
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim' "Highlights lines
+Plug 'joshdick/onedark.vim' "The One Dark Theme
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'mbbill/undotree'
-Plug 'preservim/nerdtree'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'wakatime/vim-wakatime'
-Plug 'ryanoasis/vim-devicons'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug '907th/vim-auto-save'
-Plug 'jdhao/better-escape.vim'
+Plug 'junegunn/fzf.vim' "Fuzzy find plugin
+Plug 'junegunn/goyo.vim' "Removes Line numbers for focusing
+Plug 'mbbill/undotree' "Creates an undo tree
+Plug 'preservim/nerdtree' "File browser inside vim
+Plug 'godlygeek/tabular' "Auto formatting
+Plug 'plasticboy/vim-markdown' "Markdown syntax highlighting
+Plug 'wakatime/vim-wakatime' "Wakatime tracker
+Plug 'ryanoasis/vim-devicons' "Cool icons for nerd tree
+Plug 'Xuyuanp/nerdtree-git-plugin' "nerd tree customization
+Plug '907th/vim-auto-save' "auto saves files as you edit
+Plug 'jdhao/better-escape.vim' "remaps esc key to jj
 call plug#end()
 
 " Startup Settings
 	syntax on
-  let mapleader=" "
+  let mapleader=" " "Maps Leader to space
   let NERDTreeShowHidden=1
   let g:auto_save = 1
   let g:auto_save_events = ["InsertLeave", "TextChanged"]
   let $FZF_DEFAULT_COMMAND = 'fdfind --type f --hidden --follow --exclude .git --ignore-file ~/.ignore'
-  set mouse=a
-  set clipboard=unnamedplus
+  set mouse=a "Allows mouse usage inside vim. Great for noobs.
+  set clipboard=unnamedplus "Remaps default copy paste to system clipboard
   set cursorline
   highlight CursorLine ctermbg=Yellow cterm=bold guibg=#2b2b2b
 	set noerrorbells
@@ -55,7 +56,7 @@ call plug#end()
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set spell spelllang=en_us
 
-" Plugin Shortcuts https://christitus.com
+" Plugin Shortcuts
 	map <Leader>f :NERDTreeToggle<CR>
 	map <C-\> :Goyo<CR>
   nnoremap <F5> :UndotreeToggle<CR> :UndotreeFocus<CR>
@@ -64,19 +65,8 @@ call plug#end()
   let g:better_escape_shortcut = 'jj'
   let g:better_escape_interval = 250
 
-" Paste system clipboard with Ctrl + v
-  inoremap <F10> <ESC>"*gPi
-  nnoremap <F10> "*gP<ESC>
-  vnoremap <F10> d"*gP<ESC>
-  cnoremap <F10> <C-r>*
-
-" Copy to system clipboard with Ctr + c
-  vnoremap <F9> "*y
-  nnoremap <F9> "*yy
-  inoremap <F9> <ESC>"*yyi
-
 " General Shortcuts
-  nnoremap S :%s//g<Left><Left>
+  nnoremap S :%s//g<Left><Left> 
   nmap <Leader>r :w<CR>:so %<CR>
   map <Leader>e $
 
