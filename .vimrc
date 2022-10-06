@@ -65,15 +65,15 @@ call plug#end()
   let g:better_escape_interval = 250
 
 " Paste system clipboard with Ctrl + v
-inoremap <F10> <ESC>"*gPi
-nnoremap <F10> "*gP<ESC>
-vnoremap <F10> d"*gP<ESC>
-cnoremap <F10> <C-r>*
+  inoremap <F10> <ESC>"*gPi
+  nnoremap <F10> "*gP<ESC>
+  vnoremap <F10> d"*gP<ESC>
+  cnoremap <F10> <C-r>*
 
 " Copy to system clipboard with Ctr + c
-vnoremap <F9> "*y
-nnoremap <F9> "*yy
-inoremap <F9> <ESC>"*yyi
+  vnoremap <F9> "*y
+  nnoremap <F9> "*yy
+  inoremap <F9> <ESC>"*yyi
 
 " General Shortcuts
   nnoremap S :%s//g<Left><Left>
